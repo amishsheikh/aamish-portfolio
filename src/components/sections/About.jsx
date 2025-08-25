@@ -46,12 +46,24 @@ export const About = () => {
           </h2>
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-            <p className="text-gray-300 mb-6">
-              Full-stack developer with <strong>1.8 years of experience</strong>{" "}
-              in functional testing and scripting at TCS. Skilled in the MERN
-              stack, REST API integration, and responsive UI design. Passionate
-              about building scalable, high-performance web applications.
-            </p>
+            <ul className="list-disc list-inside text-gray-300 mb-6 space-y-2">
+              <p>
+                Full Stack Developer with 1.8 years of professional experience
+                in designing and building web applications. Proficient in the
+                MERN stack (MongoDB, Express.js, React.js, Node.js) with strong
+                skills in REST API development, authentication, responsive UI,
+                and deployment on cloud platforms. Adept in Agile methodologies,
+                software development life cycle (SDLC), debugging, performance
+                optimization, and version control. Seeking a challenging
+                Software Engineer / Full Stack Developer role to contribute to
+                building scalable, secure, and high-performance applications.
+              </p>
+              <li>
+                Seeking a challenging{" "}
+                <strong>Software Engineer / Full Stack Developer role</strong>{" "}
+                to contribute technical expertise and innovative solutions.
+              </li>
+            </ul>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Frontend */}
@@ -124,18 +136,45 @@ export const About = () => {
                     Assistant System Engineer – Tata Consultancy Services (Dec
                     2023 – Present)
                   </h4>
-                  <ul className="list-disc list-inside space-y-1">
+                  <ul className="list-disc list-inside text-gray-300 mb-6 space-y-2">
                     <li>
-                      Executed functional testing of enterprise applications
-                      ensuring feature accuracy and stability.
+                      Full Stack Developer with{" "}
+                      <strong>1.8 years of professional experience</strong> in
+                      designing and building web applications.
                     </li>
                     <li>
-                      Developed and optimized test scripts using DevPlus,
-                      improving coverage and efficiency.
+                      Proficient in the <strong>MERN stack</strong> (MongoDB,
+                      Express.js, React.js, Node.js).
                     </li>
                     <li>
-                      Collaborated with developers and business analysts for
-                      defect resolution and requirement validation.
+                      Strong skills in{" "}
+                      <strong>
+                        REST API development, authentication, responsive UI
+                      </strong>
+                      , and cloud deployment.
+                    </li>
+                    <li>
+                      Experienced with{" "}
+                      <strong>
+                        Agile methodologies, SDLC, debugging, performance
+                        optimization
+                      </strong>
+                      , and version control.
+                    </li>
+                    <li>
+                      Adept at delivering{" "}
+                      <strong>
+                        scalable, secure, and high-performance applications
+                      </strong>
+                      .
+                    </li>
+                    <li>
+                      Seeking a challenging{" "}
+                      <strong>
+                        Software Engineer / Full Stack Developer role
+                      </strong>{" "}
+                      to contribute technical expertise and innovative
+                      solutions.
                     </li>
                   </ul>
                 </div>
