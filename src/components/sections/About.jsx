@@ -48,9 +48,9 @@ export const About = () => {
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <ul className="list-disc list-inside text-gray-300 mb-6 space-y-2">
               <p>
-                Full Stack Developer with 1.8 years of professional experience
-                in designing and building web applications. Proficient in the
-                MERN stack (MongoDB, Express.js, React.js, Node.js) with strong
+                Full Stack Developer with 2 years of professional experience in
+                designing and building web applications. Proficient in the MERN
+                stack (MongoDB, Express.js, React.js, Node.js) with strong
                 skills in REST API development, authentication, responsive UI,
                 and deployment on cloud platforms. Adept in Agile methodologies,
                 software development life cycle (SDLC), debugging, performance
