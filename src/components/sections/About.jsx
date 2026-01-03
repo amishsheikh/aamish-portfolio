@@ -6,178 +6,157 @@ export const About = () => {
     "Next.js",
     "Tailwind CSS",
     "ShadCN UI",
-    "HTML",
-    "CSS",
-    "JavaScript",
+    "Vite",
+    "JavaScript (ES6+)",
+    "HTML5",
+    "CSS3",
   ];
 
   const backendSkills = [
     "Node.js",
     "Express.js",
     "MongoDB",
-    "NeonDB",
-    "Firebase (Basics)",
     "REST APIs",
+    "Microservices",
+    "NeonDB",
+    "Firebase",
   ];
 
-  const otherSkills = [
-    "Clerk Auth",
-    "Auth.js",
+  const toolsAndOthers = [
+    "Clerk",
     "JWT",
-    "Git",
-    "GitHub",
-    "VS Code",
+    "Auth.js",
+    "Git & GitHub",
     "Postman",
-    "DevPlus (TCS Internal)",
-    "Functional Testing",
-    "Manual Testing",
-    "Defect Tracking",
+    "Docker",
+    "Vercel/Netlify",
+    "OpenAI API",
+    "Agile",
   ];
 
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 relative overflow-hidden bg-gradient-to-b from-transparent to-purple-900/10"
     >
+      {/* Animated Background Orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
       <RevealOnScroll>
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl md:text-6xl font-black mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent text-center">
             About Me
           </h2>
 
-          <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-            <ul className="list-disc list-inside text-gray-300 mb-6 space-y-2">
-              <p>
-                Full Stack Developer with 2 years + of professional experience
-                in designing and building web applications. Proficient in the
-                MERN stack (MongoDB, Express.js, React.js, Node.js) with strong
-                skills in REST API development, authentication, responsive UI,
-                and deployment on cloud platforms. Adept in Agile methodologies,
-                software development life cycle (SDLC), debugging, performance
-                optimization, and version control. Seeking a challenging
-                Software Engineer / Full Stack Developer role to contribute to
-                building scalable, secure, and high-performance applications.
-              </p>
-              <li>
-                Seeking a challenging{" "}
-                <strong>Software Engineer / Full Stack Developer role</strong>{" "}
-                to contribute technical expertise and innovative solutions.
-              </li>
-            </ul>
+          {/* Intro Paragraph */}
+          <p className="text-xl md:text-2xl text-gray-300 text-center mb-20 max-w-4xl mx-auto leading-relaxed">
+            Passionate{" "}
+            <strong className="text-blue-400">Full Stack Developer</strong> at{" "}
+            <strong className="text-blue-400">
+              Tata Consultancy Services (TCS)
+            </strong>{" "}
+            with over <strong className="text-blue-400">2 years</strong> of
+            experience building scalable MERN applications. I deliver
+            high-impact solutions — automating workflows, optimizing
+            performance, and creating intuitive user experiences.
+          </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Frontend */}
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Frontend</h3>
-                <div className="flex flex-wrap gap-2">
-                  {frontendSkills.map((tech, key) => (
+          {/* Skills Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            {[
+              {
+                title: "Frontend",
+                skills: frontendSkills,
+                gradient: "from-blue-400 to-cyan-400",
+              },
+              {
+                title: "Backend",
+                skills: backendSkills,
+                gradient: "from-cyan-400 to-purple-400",
+              },
+              {
+                title: "Tools & More",
+                skills: toolsAndOthers,
+                gradient: "from-purple-400 to-pink-400",
+              },
+            ].map((category) => (
+              <div
+                key={category.title}
+                className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:-translate-y-4 hover:border-blue-500/40 hover:shadow-[0_20px_40px_rgba(59,130,246,0.3)] transition-all duration-500"
+              >
+                <h3
+                  className={`text-2xl font-bold mb-6 text-center bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}
+                >
+                  {category.title}
+                </h3>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {category.skills.map((skill) => (
                     <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                      key={skill}
+                      className="bg-white/10 text-gray-300 py-2 px-4 rounded-full text-sm font-medium hover:bg-blue-500/20 hover:text-white transition"
                     >
-                      {tech}
+                      {skill}
                     </span>
                   ))}
                 </div>
               </div>
-
-              {/* Backend */}
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Backend</h3>
-                <div className="flex flex-wrap gap-2">
-                  {backendSkills.map((tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Other Skills */}
-            <div className="mt-6 rounded-xl p-6 hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">Other Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {otherSkills.map((tech, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* Education & Work Experience */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            {/* Education */}
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">🏫 Education</h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>
-                  <strong>B.E. in Computer Science & Engineering</strong> –
-                  RTMNU University, Nagpur (2019–2023)
-                </li>
-                <li>Percentage: 83%</li>
-              </ul>
+          {/* Experience & Education */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Work Experience */}
+            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(59,130,246,0.3)] transition-all duration-500">
+              <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Work Experience
+              </h3>
+              <div className="text-gray-300 space-y-4">
+                <h4 className="text-2xl font-bold text-white">
+                  Assistant System Engineer
+                </h4>
+                <p className="text-blue-400 font-medium">
+                  Tata Consultancy Services (TCS)
+                </p>
+                <p className="text-sm">Dec 2023 – Present</p>
+                <ul className="mt-6 space-y-3 text-gray-300">
+                  <li>
+                    • Engineered MERN apps reducing manual effort by{" "}
+                    <strong className="text-blue-400">25%</strong>
+                  </li>
+                  <li>
+                    • Built REST APIs improving efficiency by{" "}
+                    <strong className="text-blue-400">20%</strong>
+                  </li>
+                  <li>• Created real-time dashboards with React & Tailwind</li>
+                  <li>• Implemented secure JWT & RBAC authentication</li>
+                  <li>
+                    • Accelerated release cycles by{" "}
+                    <strong className="text-blue-400">15%</strong> in Agile
+                    teams
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            {/* Work Experience */}
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">💼 Work Experience</h3>
-              <div className="space-y-4 text-gray-300">
-                <div>
-                  <h4 className="font-semibold">
-                    Assistant System Engineer – Tata Consultancy Services (Dec
-                    2023 – Present)
-                  </h4>
-                  <ul className="list-disc list-inside text-gray-300 mb-6 space-y-2">
-                    <li>
-                      Full Stack Developer with{" "}
-                      <strong>1.8 years of professional experience</strong> in
-                      designing and building web applications.
-                    </li>
-                    <li>
-                      Proficient in the <strong>MERN stack</strong> (MongoDB,
-                      Express.js, React.js, Node.js).
-                    </li>
-                    <li>
-                      Strong skills in{" "}
-                      <strong>
-                        REST API development, authentication, responsive UI
-                      </strong>
-                      , and cloud deployment.
-                    </li>
-                    <li>
-                      Experienced with{" "}
-                      <strong>
-                        Agile methodologies, SDLC, debugging, performance
-                        optimization
-                      </strong>
-                      , and version control.
-                    </li>
-                    <li>
-                      Adept at delivering{" "}
-                      <strong>
-                        scalable, secure, and high-performance applications
-                      </strong>
-                      .
-                    </li>
-                    <li>
-                      Seeking a challenging{" "}
-                      <strong>
-                        Software Engineer / Full Stack Developer role
-                      </strong>{" "}
-                      to contribute technical expertise and innovative
-                      solutions.
-                    </li>
-                  </ul>
-                </div>
+            {/* Education */}
+            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(59,130,246,0.3)] transition-all duration-500">
+              <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Education
+              </h3>
+              <div className="text-gray-300">
+                <h4 className="text-2xl font-bold text-white">
+                  B.E. Computer Engineering
+                </h4>
+                <p className="text-blue-400 font-medium">
+                  RTMNU Nagpur University
+                </p>
+                <p className="text-sm">2019 – 2023</p>
+                <p className="mt-6 text-3xl font-bold text-cyan-400">
+                  83% Aggregate
+                </p>
               </div>
             </div>
           </div>
