@@ -19,7 +19,6 @@ export const Projects = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {/* Reusable Project Card with Moving Border */}
             {[
               {
                 title: "AI Invoice Generator",
@@ -90,8 +89,8 @@ export const Projects = () => {
                 key={project.title}
                 className="relative group p-[4px] rounded-3xl bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-[length:400%_400%] animate-border-move hover:animate-border-move-fast transition-all duration-500"
               >
-                {/* Inner Card */}
-                <div className="h-full p-6 rounded-3xl bg-black/90 backdrop-blur-2xl border border-white/10 group-hover:-translate-y-3 group-hover:shadow-[0_25px_50px_rgba(139,92,246,0.5)] transition-all duration-500">
+                {/* Inner Card - Mobile Safe */}
+                <div className="h-full p-6 rounded-3xl bg-gray-950/95 border border-white/20 group-hover:border-purple-500/60 group-hover:-translate-y-4 group-hover:shadow-[0_25px_50px_rgba(139,92,246,0.5)] transition-all duration-500">
                   <img
                     src={project.img}
                     alt={`${project.title} screenshot`}
@@ -141,7 +140,7 @@ export const Projects = () => {
         </div>
       </RevealOnScroll>
 
-      {/* CSS Keyframes for Moving Border */}
+      {/* Moving Border Animation */}
       <style jsx>{`
         @keyframes border-move {
           0% {
@@ -169,8 +168,8 @@ export const Projects = () => {
           animation: border-move 12s ease infinite;
         }
 
-        .animate-border-move-fast:hover {
-          animation: border-move-fast 4s ease infinite;
+        .hover\\:animate-border-move-fast:hover {
+          animation: border-move-fast 3s ease infinite;
         }
       `}</style>
     </section>
