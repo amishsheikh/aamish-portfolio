@@ -89,7 +89,7 @@ export const Projects = () => {
                 key={project.title}
                 className="relative group p-[4px] rounded-3xl bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-[length:400%_400%] animate-border-move hover:animate-border-move-fast transition-all duration-500"
               >
-                {/* Inner Card - Mobile Safe */}
+                {/* Inner Card - Removed backdrop-blur for mobile compatibility */}
                 <div className="h-full p-6 rounded-3xl bg-gray-950/95 border border-white/20 group-hover:border-purple-500/60 group-hover:-translate-y-4 group-hover:shadow-[0_25px_50px_rgba(139,92,246,0.5)] transition-all duration-500">
                   <img
                     src={project.img}
